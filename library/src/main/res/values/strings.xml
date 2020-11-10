@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Library</string>
+
+    <string name="string_logoutname">\n注销账号：XXXXXX</string>
+    <string name="string_comment">wo~用的怎么样？\n如果还行，请为我点个赞！</string>
+    <string name="string_logouttime">\n注销申请时间：2019-10-23 19:30:23</string>
+    <string name="string_logouthint">\n• 账号一旦注销成功，我们将清除当前APP的所有数据，您将再也无法使用此账号注册/登录当前APP，亦无法继续操作。\n\n • 申请账号注销期间，如人工客服主动联系您，请及时接听，以免造成注销申请失败</string>
+    <string name="string_proxy">亲爱的用户：\n&#160; &#160; &#160; &#160; &#160; 您好，在您使用本应用前，请您认真阅读并了解《用户协议》和《隐私政策》。点击“同意”即表示已阅读并同意全部条款。</string>
+
+    <drawable name="color_click_normal">#00000000</drawable>
+    <drawable name="color_click_normal_white">#ffffff</drawable>
+    <drawable name="color_click_yellow">#FACD48</drawable>
+    <drawable name="color_click_pressed">#80cccccc</drawable>
 </resources>
