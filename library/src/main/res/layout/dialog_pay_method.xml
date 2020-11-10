@@ -134,6 +134,7 @@
           android:gravity="center"
           android:text="立即开通"
           android:textColor="#ffffff"
+          android:background="#000000"
           android:layout_gravity="center_horizontal"
           android:textSize="16sp"
        />
