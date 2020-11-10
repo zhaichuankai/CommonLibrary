@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/ll_root"
             android:layout_width="276dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"
@@ -19,7 +20,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_version"
+                android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="79dp"
@@ -75,10 +76,10 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/img_logo"
             android:layout_width="136dp"
             android:layout_height="136dp"
-            android:layout_centerHorizontal="true"
- />
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 

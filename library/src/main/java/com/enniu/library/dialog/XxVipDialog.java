@@ -1,35 +1,46 @@
-package com.enniu.library.widget.dialog;
+package com.enniu.library.dialog;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import com.enniu.library.R;
-import com.enniu.library.base.XxBaseActivity;
 
 /**
  * @Description:
  * @Created:2020-11-10
  */
 public class XxVipDialog extends Dialog {
-    private RelativeLayout rlTop, rlBottom;
-    private ImageView imgCancel;
+    private RelativeLayout mRlTop, mRlBottom;
+    public TextView mTvTitle;
+    public TextView mTvContent;
+    public ImageView mImgCancel;
+    public ImageView mImgLogo;
+    public TextView mTvTop;
+    public TextView mTvBottom;
 
-    public XxVipDialog(@NonNull XxBaseActivity activity, IXxVipListener listener) {
-        super(activity, R.style.style_dialog);
-        View view = LayoutInflater.from(activity).inflate(R.layout.dialog_deblocking, null);
+    public XxVipDialog(@NonNull Context context, IXxVipListener listener) {
+        super(context, R.style.style_dialog);
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_deblocking, null);
         setContentView(view);
 
-        rlTop = view.findViewById(R.id.rl_top);
-        rlBottom = view.findViewById(R.id.rl_bottom);
-        imgCancel = view.findViewById(R.id.img_cancel);
+        mRlTop = view.findViewById(R.id.rl_top);
+        mRlBottom = view.findViewById(R.id.rl_bottom);
+        mImgCancel = view.findViewById(R.id.img_cancel);
+        mImgLogo = view.findViewById(R.id.img_logo);
+        mTvTitle = view.findViewById(R.id.tv_title);
+        mTvContent = view.findViewById(R.id.tv_content);
+        mTvTop = view.findViewById(R.id.tv_top);
+        mTvBottom = view.findViewById(R.id.tv_bottom);
 
-        rlTop.setOnClickListener(new View.OnClickListener() {
+        mRlTop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listener.clickTop();
@@ -37,7 +48,7 @@ public class XxVipDialog extends Dialog {
             }
         });
 
-        rlBottom.setOnClickListener(new View.OnClickListener() {
+        mRlBottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listener.clickBottom();
@@ -45,7 +56,7 @@ public class XxVipDialog extends Dialog {
             }
         });
 
-        imgCancel.setOnClickListener(new View.OnClickListener() {
+        mImgCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();

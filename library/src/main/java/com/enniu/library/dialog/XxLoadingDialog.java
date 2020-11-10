@@ -1,4 +1,4 @@
-package com.enniu.library.widget.dialog;
+package com.enniu.library.dialog;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -25,6 +25,14 @@ public class XxLoadingDialog {
 
     }
 
+    public static class Builder {
+        public XxLoadingDialog buildLoading(Context context) {
+            XxLoadingDialog dialog = new XxLoadingDialog();
+            dialog.createLoadingDialog(context);
+            return dialog;
+        }
+    }
+
     @SuppressLint("ObjectAnimatorBinding")
     private void createLoadingDialog(Context context) {
         this.mContext = context;
@@ -36,14 +44,6 @@ public class XxLoadingDialog {
         mDialog.setContentView(contentView);
         mDialog.setCancelable(true);
         mDialog.setCanceledOnTouchOutside(true);
-    }
-
-    public static class Builder {
-        public XxLoadingDialog buildLoading(Context context) {
-            XxLoadingDialog dialog = new XxLoadingDialog();
-            dialog.createLoadingDialog(context);
-            return dialog;
-        }
     }
 
     public void show() {

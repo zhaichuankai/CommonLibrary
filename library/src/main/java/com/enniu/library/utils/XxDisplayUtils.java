@@ -6,8 +6,6 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.enniu.library.base.XxBaseApplication;
-
 import java.lang.reflect.Method;
 
 
@@ -23,13 +21,13 @@ public class XxDisplayUtils {
     private static int mWidthPixels = 0;
     private static int mHeightPixels = 0;
 
-    public static void init() {
+    public static void init(Context context) {
         DisplayMetrics displaysMetrics = new DisplayMetrics();// 初始化一个结构
-        WindowManager wm = (WindowManager) XxBaseApplication.mInstance.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         wm.getDefaultDisplay().getMetrics(displaysMetrics);// 对该结构赋值
         mWidthPixels = displaysMetrics.widthPixels;
         mHeightPixels = displaysMetrics.heightPixels;
-        DisplayMetrics dm = XxBaseApplication.mInstance.getResources().getDisplayMetrics();
+        DisplayMetrics dm =context.getResources().getDisplayMetrics();
         mScale = dm.density;
         mDpi = dm.densityDpi;
         mFontScale = dm.scaledDensity;
@@ -46,22 +44,13 @@ public class XxDisplayUtils {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int)(dipValue * scale + 0.5f);
     }
-    /**
-     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
-     */
-    public static int dip2px(float dpValue) {
-        if (mScale == 0) {
-            init();
-        }
-        return (int) (dpValue * mScale + 0.5f);
-    }
 
     /**
      * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
      */
-    public static int px2dip(float pxValue) {
+    public static int px2dip(Context context,float pxValue) {
         if (mScale == 0) {
-            init();
+            init(context);
         }
         return (int) (pxValue / mScale + 0.5f);
     }
@@ -69,10 +58,10 @@ public class XxDisplayUtils {
     /**
      * 得到的屏幕的宽度
      */
-    public static int getWidthPx() {
+    public static int getWidthPx(Context context) {
         // DisplayMetrics 一个描述普通显示信息的结构，例如显示大小、密度、字体尺寸
         if (mWidthPixels == 0) {
-            init();
+            init(context);
         }
         return mWidthPixels;
     }
@@ -80,10 +69,10 @@ public class XxDisplayUtils {
     /**
      * 得到的屏幕的高度
      */
-    public static int getHeightPx() {
+    public static int getHeightPx(Context context) {
         // DisplayMetrics 一个描述普通显示信息的结构，例如显示大小、密度、字体尺寸
         if (mHeightPixels == 0) {
-            init();
+            init(context);
         }
         return mHeightPixels;
     }
@@ -91,10 +80,10 @@ public class XxDisplayUtils {
     /**
      * 得到屏幕的dpi
      */
-    public static int getDensityDpi() {
+    public static int getDensityDpi(Context context) {
         // DisplayMetrics 一个描述普通显示信息的结构，例如显示大小、密度、字体尺寸
         if (mDpi == 0) {
-            init();
+            init(context);
         }
         return mDpi;
     }
@@ -121,9 +110,9 @@ public class XxDisplayUtils {
     }
 
 
-    public static int px2sp(float pxValue) {
+    public static int px2sp(Context context,float pxValue) {
         if (mFontScale == 0) {
-            init();
+            init(context);
         }
         return (int) (pxValue / mFontScale + 0.5f);
     }
@@ -151,9 +140,9 @@ public class XxDisplayUtils {
      *
      * @param spValue （DisplayMetrics类中属性scaledDensity）
      */
-    public static int sp2px(float spValue) {
+    public static int sp2px(Context context,float spValue) {
         if (mFontScale == 0) {
-            init();
+            init(context);
         }
         return (int) (spValue * mFontScale + 0.5f);
     }

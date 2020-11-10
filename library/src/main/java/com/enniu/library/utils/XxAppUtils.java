@@ -1,4 +1,4 @@
-package com.enniu.library.manager;
+package com.enniu.library.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,10 +9,10 @@ import java.util.Stack;
 /**
  * 应用程序Activity管理类：用于Activity管理和应用程序退出
  */
-public class XxAppManager {
+public class XxAppUtils {
 
 	public static Stack<Activity> activityStack;
-	private static XxAppManager instance;
+	private static XxAppUtils instance;
 	private static HashMap<String, Integer> standMemory = new HashMap<String, Integer>();
 
 	public void addMemory(Object o) {
@@ -26,9 +26,9 @@ public class XxAppManager {
 	/**
 	 * 单一实例
 	 */
-	public static XxAppManager getAppManager() {
+	public static XxAppUtils getInstance() {
 		if (instance == null) {
-			instance = new XxAppManager();
+			instance = new XxAppUtils();
 		}
 		return instance;
 	}

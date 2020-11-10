@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/ll_root"
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_white_solid_10"
@@ -15,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_version"
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="31dp"
@@ -26,7 +27,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_msg"
+            android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -38,7 +39,7 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/tv_sure"
+            android:id="@+id/btn_sure"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginLeft="20dp"

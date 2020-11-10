@@ -1,40 +1,47 @@
-package com.enniu.library.widget.dialog;
+package com.enniu.library.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.enniu.library.R;
 
-
-/**
- * 高级版弹窗
- */
-
 public class XxCommentDialog {
     private Dialog mDialog;
+    public LinearLayout mLlRoot;
+    public TextView mTvTitle;
+    public TextView mTvLike;
+    public TextView mTvCancel;
+    public TextView mTvDislike;
+    public ImageView mImgLogo;
 
     public XxCommentDialog(Context context, ICommentListener listener) {
-        mDialog = new Dialog(context, R.style.style_dialog);
         View view = View.inflate(context, R.layout.dialog_comment, null);
+        mLlRoot = view.findViewById(R.id.ll_root);
+        mTvTitle = view.findViewById(R.id.tv_title);
+        mTvLike = view.findViewById(R.id.tv_like);
+        mTvCancel = view.findViewById(R.id.tv_cancel);
+        mTvDislike = view.findViewById(R.id.tv_dislike);
+        mImgLogo = view.findViewById(R.id.img_logo);
+
+        mDialog = new Dialog(context, R.style.style_dialog);
         mDialog.setContentView(view);
         mDialog.setCancelable(true);
         mDialog.setCanceledOnTouchOutside(true);
 
-        TextView tvLike = view.findViewById(R.id.tv_like);
-        TextView tvCancel = view.findViewById(R.id.tv_cancel);
-        TextView tvDislike = view.findViewById(R.id.tv_dislike);
-        tvLike.setOnClickListener(view12 -> {
+        mTvLike.setOnClickListener(view12 -> {
             listener.like();
             mDialog.dismiss();
         });
 
-        tvCancel.setOnClickListener(view12 -> {
+        mTvCancel.setOnClickListener(view12 -> {
             mDialog.dismiss();
         });
 
-        tvDislike.setOnClickListener(view12 -> {
+        mTvDislike.setOnClickListener(view12 -> {
             listener.dislike();
             mDialog.dismiss();
         });
