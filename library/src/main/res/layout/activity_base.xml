@@ -26,7 +26,6 @@
             android:clickable="true"
             android:padding="14dp"
             android:background="@drawable/shape_btn_press_color"
-            android:src="@mipmap/ic_back"
             />
 
         <TextView
@@ -74,7 +73,6 @@
         android:id="@+id/v_line"
         android:layout_below="@id/rl_tab"
         android:layout_width="match_parent"
-        android:background="@color/colorBg"
         android:layout_height="1dp"/>
 
 </RelativeLayout>

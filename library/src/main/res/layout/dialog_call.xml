@@ -19,7 +19,7 @@
             android:layout_marginLeft="17dp"
             android:layout_marginTop="44dp"
             android:layout_marginRight="17dp"
-            android:background="@mipmap/bg_call"
+            android:background="@drawable/shape_white_solid_10"
             android:gravity="center_horizontal"
             android:minHeight="212dp"
             android:orientation="vertical">
@@ -47,7 +47,7 @@
                     android:id="@+id/ll_wechat"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:background="@drawable/shape_eeeeee_solid_half"
+                    android:background="#ffffff"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -55,7 +55,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginLeft="18dp"
-                        android:src="@mipmap/ic_wexin" />
+                 />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -74,7 +74,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/shape_eeeeee_solid_half"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -82,7 +81,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginLeft="18dp"
-                        android:src="@mipmap/ic_qq" />
+                     />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,7 +103,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="right"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/ic_call" />
+      />
 
         <ImageView
             android:id="@+id/img_cancel"
@@ -113,6 +112,6 @@
             android:layout_alignRight="@id/ll"
             android:layout_marginTop="54dp"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/ic_cha" />
+     />
     </RelativeLayout>
 </LinearLayout>

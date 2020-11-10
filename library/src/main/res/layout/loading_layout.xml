@@ -18,7 +18,6 @@
             android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            app:loading_color="@color/colorYellow"
             app:loading_width="2dp" />
 
     </FrameLayout>
