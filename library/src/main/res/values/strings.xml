@@ -11,4 +11,8 @@
     <drawable name="color_click_normal_white">#ffffff</drawable>
     <drawable name="color_click_yellow">#FACD48</drawable>
     <drawable name="color_click_pressed">#80cccccc</drawable>
+
+    <string name="spd"/>
+    <string name="original_y"/>
+    <string name="isUp"/>
 </resources>

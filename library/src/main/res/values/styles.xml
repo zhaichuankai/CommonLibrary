@@ -18,7 +18,7 @@
         <item name="android:alpha">1</item>
     </style>
 
-    <declare-styleable name="RotateLoading">
+    <declare-styleable name="style_rotate_loading">
         <attr name="loading_width" format="dimension"/>
         <attr name="loading_color" format="color"/>
         <attr name="shadow_position" format="integer"/>

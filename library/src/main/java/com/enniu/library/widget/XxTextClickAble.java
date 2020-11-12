@@ -12,7 +12,6 @@ public class XxTextClickAble extends ClickableSpan {
     public void onClick(View widget) {
     }
 
-
     @Override
     public void updateDrawState(TextPaint ds) {
         super.updateDrawState(ds);

@@ -14,4 +14,13 @@
         <!-- 右边图片的大小 -->
         <attr name="mClearEditText_rightDrawableSize" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="MWaterView">
+        <attr name="mWaterView_speed" format="float"/>
+        <attr name="mWaterView_x" format="dimension"/>
+        <attr name="mWaterView_y" format="dimension"/>
+        <attr name="mWaterView_name" format="string"/>
+        <attr name="mWaterView_img_width" format="dimension"/>
+        <attr name="mWaterView_img_height" format="dimension"/>
+    </declare-styleable>
 </resources>

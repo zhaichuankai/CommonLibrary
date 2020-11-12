@@ -72,11 +72,11 @@ public class XxRotateLoading extends View {
         speedOfDegree = DEFAULT_SPEED_OF_DEGREE;
 
         if (null != attrs) {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RotateLoading);
-            color = typedArray.getColor(R.styleable.RotateLoading_loading_color, Color.WHITE);
-            width = typedArray.getDimensionPixelSize(R.styleable.RotateLoading_loading_width, dpToPx(context, DEFAULT_WIDTH));
-            shadowPosition = typedArray.getInt(R.styleable.RotateLoading_shadow_position, DEFAULT_SHADOW_POSITION);
-            speedOfDegree = typedArray.getInt(R.styleable.RotateLoading_loading_speed, DEFAULT_SPEED_OF_DEGREE);
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.style_rotate_loading);
+            color = typedArray.getColor(R.styleable.style_rotate_loading_loading_color, Color.WHITE);
+            width = typedArray.getDimensionPixelSize(R.styleable.style_rotate_loading_loading_width, dpToPx(context, DEFAULT_WIDTH));
+            shadowPosition = typedArray.getInt(R.styleable.style_rotate_loading_shadow_position, DEFAULT_SHADOW_POSITION);
+            speedOfDegree = typedArray.getInt(R.styleable.style_rotate_loading_loading_speed, DEFAULT_SPEED_OF_DEGREE);
             typedArray.recycle();
         }
         speedOfArc = speedOfDegree / 4;
@@ -111,9 +111,9 @@ public class XxRotateLoading extends View {
         canvas.drawArc(shadowRectF, topDegree, arc, false, mPaint);
         canvas.drawArc(shadowRectF, bottomDegree, arc, false, mPaint);
 
-        mPaint.setColor(Color.parseColor("#E602CCFF"));
+        mPaint.setColor(Color.parseColor("#E632D8FF"));
         canvas.drawArc(loadingRectF, topDegree, arc, false, mPaint);
-        mPaint.setColor(Color.parseColor("#E630FF9A"));
+        mPaint.setColor(Color.parseColor("#E600FF56"));
         canvas.drawArc(loadingRectF, bottomDegree, arc, false, mPaint);
 
         topDegree += speedOfDegree;
